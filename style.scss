@@ -1,0 +1,172 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper{
+	max-width: 40rem;
+	min-width: 18.75rem;
+	margin: 20px auto;
+	border: 2px solid black;
+	border-radius: 20px;
+	padding:1.25rem ;
+}
+
+.renges{
+	display: flex;
+	&>:last-child{
+		margin-left: 2rem ;
+	}
+	margin-bottom: 3rem;
+}
+
+.range{
+	width: 13.25rem;
+	&__info{
+		display: flex;
+		justify-content: space-between;
+		&-items>:last-child{
+			margin-left: 1rem ;
+		}
+		&-out{
+			font-weight: 800;
+		}
+	 }
+	 &__input{
+		margin: 1.25rem 0rem 0.5rem;
+		width: 12.5rem;
+		appearance: none;
+		height: 10px;
+		display: flex;
+		align-items: center;
+		border-right: 3px solid black;
+		border-left: 3px solid black;
+		position: relative;
+		outline: none;
+		&::-webkit-slider-thumb{		
+			appearance: none;
+			width: 10px;
+			height: 20px;
+			background-color: black;
+		 }
+		 &::before{
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 2px;
+			background-color: black;
+			background-size: cover;
+		 }	
+	 }
+	 datalist {
+		display: flex;	
+		justify-content: space-between;
+		width: 13.25rem;
+	 }	 
+	 option {
+		padding: 0;
+	 }
+	 
+ }
+ 
+.companies{
+	display: flex;
+	flex-direction: column;	
+	&>*:not(:last-child){
+		margin-bottom: 2rem;
+	}	
+}
+
+.company{
+	display: flex;
+	align-items: center;
+	&>*:not(:last-child){
+		margin-right: 1rem;
+	}
+	&__name{		
+		display: flex;
+		flex-wrap: wrap;
+	}	
+	&__logo img{
+		width: 20px;
+		height: 20px;		
+	}	
+}
+
+.radio{
+	display: flex;
+	&>:first-child{
+		margin-right: 0.4rem;
+	}
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		label{
+			margin-right: 0.5rem;
+		}
+	}
+}
+
+@media(orientation: landscape){
+	.company{
+		&__info{
+			min-width: 8rem;
+		};
+	}
+}
+
+
+@media (orientation: portrait) {
+	.wrapper{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.renges{
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 0;
+		&>:last-child{
+			margin-left: 0rem ;			
+		}
+		&>:first-child{
+			margin-bottom: 1rem;
+		}
+	}
+	.companies{
+		flex-direction: row;	
+		justify-content: space-between;
+		margin-bottom: 3rem;			
+		&>*:not(:last-child){
+			margin-bottom: 0rem;
+		}	
+	}
+	.company{
+		flex-direction: column-reverse;	
+		min-width: 4.37rem;
+		&>*:not(:last-child){
+			margin-right: 0rem;
+			margin-bottom: 0.4rem;
+		}
+		&__info{			
+			text-align: center;
+			min-height: 4rem;
+			&>*:not(:last-child){
+				margin-bottom: 0.3rem;
+			}	
+		}
+		&__name{					
+			justify-content: center;
+		}
+	}
+	.radio{
+		flex-direction: column;
+		&>:first-child{
+			margin-right: 0rem;
+		}
+		&>*:not(:last-child){
+			margin-bottom: 0.3rem;
+		}	
+	}
+	
+}

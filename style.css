@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 40rem;
+  min-width: 18.75rem;
+  margin: 20px auto;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 1.25rem;
+}
+
+.renges {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.renges > :last-child {
+  margin-left: 2rem;
+}
+
+.range {
+  width: 13.25rem;
+}
+.range__info {
+  display: flex;
+  justify-content: space-between;
+}
+.range__info-items > :last-child {
+  margin-left: 1rem;
+}
+.range__info-out {
+  font-weight: 800;
+}
+.range__input {
+  margin: 1.25rem 0rem 0.5rem;
+  width: 12.5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  position: relative;
+  outline: none;
+}
+.range__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 10px;
+  height: 20px;
+  background-color: black;
+}
+.range__input::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  background-size: cover;
+}
+.range datalist {
+  display: flex;
+  justify-content: space-between;
+  width: 13.25rem;
+}
+.range option {
+  padding: 0;
+}
+
+.companies {
+  display: flex;
+  flex-direction: column;
+}
+.companies > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+}
+.company > *:not(:last-child) {
+  margin-right: 1rem;
+}
+.company__name {
+  display: flex;
+  flex-wrap: wrap;
+}
+.company__logo img {
+  width: 20px;
+  height: 20px;
+}
+
+.radio {
+  display: flex;
+}
+.radio > :first-child {
+  margin-right: 0.4rem;
+}
+.radio__item {
+  display: flex;
+  justify-content: space-between;
+}
+.radio__item label {
+  margin-right: 0.5rem;
+}
+
+@media (orientation: landscape) {
+  .company__info {
+    min-width: 8rem;
+  }
+}
+@media (orientation: portrait) {
+  .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .renges {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .renges > :last-child {
+    margin-left: 0rem;
+  }
+  .renges > :first-child {
+    margin-bottom: 1rem;
+  }
+  .companies {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  .companies > *:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+  .company {
+    flex-direction: column-reverse;
+    min-width: 4.37rem;
+  }
+  .company > *:not(:last-child) {
+    margin-right: 0rem;
+    margin-bottom: 0.4rem;
+  }
+  .company__info {
+    text-align: center;
+    min-height: 4rem;
+  }
+  .company__info > *:not(:last-child) {
+    margin-bottom: 0.3rem;
+  }
+  .company__name {
+    justify-content: center;
+  }
+  .radio {
+    flex-direction: column;
+  }
+  .radio > :first-child {
+    margin-right: 0rem;
+  }
+  .radio > *:not(:last-child) {
+    margin-bottom: 0.3rem;
+  }
+}

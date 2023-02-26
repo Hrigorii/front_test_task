@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>Test_task</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="renges">
+			<div class="range">
+				<label class="range__info" for="storage">Storage:
+					<span class="range__info-items">
+						<span id="storageOut" class="range__info-out"></span><span class="range__info-out">GB</span></label>
+				</span>
+				<input type="range" list="values" id="storage" name="storage" class="range__input" min="0" max="1000"
+					value="0" step="1">
+				<datalist id="values">
+					<option value="0" label="0">0</option>
+					<option value="1000" label="1000">1000</option>
+				</datalist>
+			</div>
+
+			<div class="range">
+				<label class="range__info" for="transfer">Transfer:
+					<span class="range__info-items">
+						<span id="transferOut" class="range__info-out"></span><span class="range__info-out">GB</span></label>
+				</span>
+				<input type="range" list="values" id="transfer" name="transfer" class="range__input" min="0" max="1000"
+					value="0" step="1">
+				<datalist id="values">
+					<option value="0" label="0">0</option>
+					<option value="1000" label="1000">1000</option>
+				</datalist>
+			</div>
+		</div>
+
+		<div class="out-content">
+			<div class="companies">
+				<div class="company">
+					<div class="company__info">
+						<div class="company__name">backblazen</div>
+					</div>
+					<div class="company__logo">
+						<img src="./img/backblaze.png" alt="vultr">
+					</div>
+					<div class="backblaze"></div><span class="backblaze-value"></span>
+				</div>
+				<div class="company">
+					<div class="company__info">
+						<div class="company__name">bunny</div>
+						<div class="radio">
+							<div class="radio__item">
+								<label for="HDD">HDD</label>
+								<input id="HDD" type="radio" name="bunny" value="HDD" checked>
+							</div>
+							<div class="radio__item">
+								<label for="SSD">SSD</label>
+								<input id="SSD" type="radio" name="bunny" value="SSD">
+							</div>
+						</div>
+					</div>
+					<div class="company__logo">
+						<img src="./img/bunny.jpeg" alt="vultr">
+					</div>
+					<div class="bunny"></div><span class="bunny-value"></span>
+				</div>
+				<div class="company">
+					<div class="company__info">
+						<div class="company__name">scalleway</div>
+						<div class="radio">
+							<div class="radio__item">
+								<label for="Multi">Multi</label>
+								<input id="Multi" type="radio" name="scalleway" value="Multi" checked>
+							</div>
+							<div class="radio__item">
+								<label for="Single">Single</label>
+								<input id="Single" type="radio" name="scalleway" value="Single">
+							</div>
+						</div>
+					</div>
+					<div class="company__logo">
+						<img src="./img/scaleway.png" alt="vultr">
+					</div>
+					<div class="scalleway"></div><span class="scalleway-value"></span>
+				</div>
+				<div class="company">
+					<div class="company__info">
+						<div class="company__name">vultr</div>
+					</div>
+					<div class="company__logo">
+						<img src="./img/vultr.png" alt="vultr">
+					</div>
+					<div class="vultr"></div><span class="vultr-value"></span>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="script.js">	</script>
+</body>
+
+</html>
