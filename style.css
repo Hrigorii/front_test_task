@@ -45,20 +45,40 @@
   align-items: center;
   border-right: 3px solid black;
   border-left: 3px solid black;
-  position: relative;
   outline: none;
 }
 .range__input::-webkit-slider-thumb {
+  transform: translateY(-40%);
   -webkit-appearance: none;
           appearance: none;
   width: 10px;
   height: 20px;
   background-color: black;
 }
-.range__input::before {
-  position: absolute;
-  content: "";
-  width: 100%;
+.range__input::-moz-range-thumb {
+  -moz-appearance: none;
+       appearance: none;
+  width: 10px;
+  height: 20px;
+  background-color: black;
+}
+.range__input::-ms-thumb {
+  appearance: none;
+  width: 10px;
+  height: 20px;
+  background-color: black;
+}
+.range__input::-moz-range-track {
+  height: 2px;
+  background-color: black;
+  background-size: cover;
+}
+.range__input::-webkit-slider-runnable-track {
+  height: 2px;
+  background-color: black;
+  background-size: cover;
+}
+.range__input::-ms-track {
   height: 2px;
   background-color: black;
   background-size: cover;
@@ -112,7 +132,7 @@
 
 @media (orientation: landscape) {
   .company__info {
-    min-width: 8rem;
+    min-width: 9rem;
   }
 }
 @media (orientation: portrait) {

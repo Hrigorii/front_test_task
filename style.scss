@@ -41,23 +41,42 @@
 		display: flex;
 		align-items: center;
 		border-right: 3px solid black;
-		border-left: 3px solid black;
-		position: relative;
+		border-left: 3px solid black;		
 		outline: none;
-		&::-webkit-slider-thumb{		
+		&::-webkit-slider-thumb{	
+			transform: translateY(-40%);
 			appearance: none;
 			width: 10px;
 			height: 20px;
 			background-color: black;
 		 }
-		 &::before{
-			position: absolute;
-			content: '';
-			width: 100%;
+		&::-moz-range-thumb{
+			appearance: none;
+			width: 10px;
+			height: 20px;
+			background-color: black;
+		}
+		&::-ms-thumb{
+			appearance: none;
+			width: 10px;
+			height: 20px;
+			background-color: black;
+		}
+		&::-moz-range-track{
 			height: 2px;
 			background-color: black;
 			background-size: cover;
-		 }	
+		}
+		&::-webkit-slider-runnable-track{				
+			height: 2px;
+			background-color: black;
+			background-size: cover;
+		}	
+		 &::-ms-track{
+			height: 2px;
+			background-color: black;
+			background-size: cover;
+		}
 	 }
 	 datalist {
 		display: flex;	
@@ -67,7 +86,6 @@
 	 option {
 		padding: 0;
 	 }
-	 
  }
  
 .companies{
@@ -111,7 +129,7 @@
 @media(orientation: landscape){
 	.company{
 		&__info{
-			min-width: 8rem;
+			min-width: 9rem;
 		};
 	}
 }
